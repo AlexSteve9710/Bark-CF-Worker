@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "bark",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-06-11",
+  "compatibility_flags": ["nodejs_compat"],
+
+  "kv_namespaces": [
+    {
+      "binding": "BARK_KV",
+      "id": "your_kv_id"
+    }
+  ],
+
+  "observability": {
+    "enabled": true
+  },
+
+  "routes": [
+    {
+      "pattern": "your.domian.com",
+      "custom_domain": true
+    }
+  ]
+}
